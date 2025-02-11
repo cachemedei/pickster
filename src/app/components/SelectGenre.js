@@ -33,11 +33,8 @@ export default function SelectGenre() {
             </section>
             <ul role='list' className='w-40 mx-auto space-y-2'>
                 {genres.map((genre) => (
-                    <li
-                        className='cursor-pointer flex justify-between w-44'
-                        key={genre.code}
-                    >
-                        <span
+                    <li className='flex justify-between w-44' key={genre.code}>
+                        <button
                             data-title={genre.genre}
                             id={genre.code}
                             onClick={handleChoice}
@@ -49,16 +46,12 @@ export default function SelectGenre() {
                             }`}
                         >
                             {genre.genre}
-                        </span>
-                        <Link href={`/result/${choice.code}`}>
-                            <FaArrowRight
-                                className={`cursor-pointer text-2xl mt-2 text-accent ${
-                                    choice.code === genre.code
-                                        ? 'block'
-                                        : 'hidden'
-                                }`}
-                            />
-                        </Link>
+                        </button>
+                        {choice.code === genre.code && (
+                            <Link  href={`/result/${choice.code}`}>
+                                <FaArrowRight className='text-2xl mt-2 text-accent' />
+                            </Link>
+                        )}
                     </li>
                 ))}
             </ul>
