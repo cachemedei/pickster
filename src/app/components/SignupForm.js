@@ -1,8 +1,14 @@
+'use client'
 import Link from 'next/link';
+import toast, { Toaster } from 'react-hot-toast';
 
 export default function SignupForm() {
+    const handleSignup = () => {
+        toast('Sorry! This page is still under construction')
+    }
     return (
         <main className='min-h-screen bg-form bg-cover font-main font-extralight text-lg flex items-center justify-center md:font-light'>
+            <Toaster />
             <section className='w-[450px] rounded h-[600px] flex flex-col items-center justify-around bg-background/95'>
                 <form className='w-4/5 space-y-3 flex flex-col items-center'>
                     <div className='w-72'>
@@ -46,13 +52,13 @@ export default function SignupForm() {
                         />
                     </div>
 
-                    <button className='border border-accent w-fit rounded px-2 py-1.5'>
+                    <button type='button' onClick={handleSignup} className='border border-accent w-fit rounded px-2 py-1.5'>
                         Create Account
                     </button>
                 </form>
                 <Link href={'/login'}>
                     Already have an account?{' '}
-                    <span className='font-medium'>Log in</span> here
+                    <span className='font-medium'>Log in</span>
                 </Link>
             </section>
         </main>
