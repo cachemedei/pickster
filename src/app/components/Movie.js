@@ -80,8 +80,8 @@ export default function Movie({ genreId, movies }) {
                     passHref
                     className='flex items-center gap-2 w-fit mx-auto space-y-4'
                 >
-                    <p className='pt-4 mx-auto font-light w-fit'>
-                        Where to watch {movies[result]?.title}
+                    <p className='pt-4 mx-auto font-light w-fit text-lg'>
+                        Where to watch <span className='font-semibold'>{movies[result]?.title}</span>
                     </p>
                     <FaArrowRight size={15} className='text-accent' />
                 </Link>

@@ -27,8 +27,8 @@ export default function WatchData({ data }) {
     const movieTitle = searchParams.get('title') || 'Title unknown';
 
     return (
-        <main className='min-h-screen flex flex-col space-y-10 pt-10'>
-            {getAvailableOptions === 'not available' ? (
+        <main className='min-h-screen flex flex-col space-y-14 pt-10'>
+            {!data.rent && !data.buy && !data.flatrate ? (
                 <section className='w-72 mx-auto flex flex-col space-y-8 mt-28'>
                     <h1 className='text-2xl text-center font-extralight'>
                         Sorry! It looks this movie isn't available anywhere
@@ -47,14 +47,9 @@ export default function WatchData({ data }) {
                     </Link>
                 </section>
             ) : (
-                <section className='flex flex-col space-y-4 w-fit mx-auto'>
-                    <h1 className='text-2xl font-extralight ml-[-20] md:ml-[-40]'>
-                        Here's where you can watch
-                    </h1>
-                    <h1 className='text-3xl border-b-2 border-accent'>
-                        {movieTitle}
-                    </h1>
-                </section>
+                <h1 className='text-3xl border-b-2 border-accent w-72 mx-auto px-4 md:w-[480px] lg:w-[500px] text-center'>
+                    {movieTitle}
+                </h1>
             )}
             {/* RENT */}
             {data.rent ? (

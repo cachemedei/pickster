@@ -15,7 +15,7 @@ export default function Provider({ providerData, type }) {
         <section className='w-80 mx-auto space-y-2'>
             <button
                 onClick={handleShowOptions}
-                className='flex gap-2 text-accent text-3xl'
+                className='flex gap-2 text-accent text-2xl'
             >
                 {type}{' '}
                 <FaArrowRight
