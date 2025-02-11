@@ -27,7 +27,7 @@ export default function WatchData({ data }) {
     const movieTitle = searchParams.get('title') || 'Title unknown';
 
     return (
-        <main className='min-h-screen mt-[60px] flex flex-col space-y-10 pt-10'>
+        <main className='min-h-screen flex flex-col space-y-10 pt-10'>
             {getAvailableOptions === 'not available' ? (
                 <section className='w-72 mx-auto flex flex-col space-y-8 mt-28'>
                     <h1 className='text-2xl text-center font-extralight'>

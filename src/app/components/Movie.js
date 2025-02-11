@@ -21,7 +21,7 @@ export default function Movie({ genreId, movies }) {
     };
 
     return (
-        <main className='mt-[60px] flex flex-col font-main text-text lg:w-4/5 lg:mx-auto'>
+        <main className='flex flex-col font-main text-text lg:w-4/5 lg:mx-auto'>
             {/* Image */}
             <Image
                 className='w-full object-cover md:w-4/5 md:mx-auto'
@@ -89,4 +89,3 @@ export default function Movie({ genreId, movies }) {
         </main>
     );
 }
-

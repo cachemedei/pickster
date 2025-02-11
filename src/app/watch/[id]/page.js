@@ -1,4 +1,4 @@
-import WatchData from "@/app/components/WatchData";
+import WatchData from '@/app/components/WatchData';
 
 async function fetchWatchData(id) {
     const url = `https://api.themoviedb.org/3/movie/${id}/watch/providers`;
@@ -17,9 +17,8 @@ async function fetchWatchData(id) {
 }
 
 export default async function WhereToWatch({ params }) {
-    const { id } = await params
+    const { id } = await params;
     const data = await fetchWatchData(id);
-
 
     return <WatchData data={data} />;
 }

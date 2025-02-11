@@ -1,5 +1,4 @@
 'use client';
-
 import Link from 'next/link';
 import { useState } from 'react';
 import { FaArrowRight } from 'react-icons/fa';
@@ -23,7 +22,6 @@ export default function SelectGenre() {
         const title = e.target.getAttribute('data-title');
         const code = Number(e.target.id);
         setChoice({ genre: title, code: code });
-        console.log(choice);
     };
 
     return (

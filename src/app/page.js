@@ -22,9 +22,9 @@ export default async function HomePage() {
     const movies = await fetchTrendingMovies();
 
     return (
-        <main className='min-h-screen mt-[60px] font-main font-extralight space-y-8'>
+        <main className='min-h-screen font-main font-extralight space-y-8'>
             <HeroBanner movies={movies} />
-            <div className='space-y-10 md:absolute top-40 left-20'>
+            <div className='space-y-10 md:absolute top-32 left-20'>
                 <div className='w-72 mx-auto text-lg'>
                     <h1>
                         Let us take the hassle and wasted time out of deciding

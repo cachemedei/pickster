@@ -16,6 +16,18 @@ export default {
             fontFamily: {
                 main: ['Inter'],
             },
+            animation: {
+                rock: 'rocking 0.70s ease-in-out infinite',
+            },
+            keyframes: {
+                rocking: {
+                    '0%, 100%': {transform: 'rotate(-8deg)'},
+                    '50%': {transform: 'rotate(8deg)'},
+                }
+            },
+            backgroundImage: {
+                'form': "url('/form-bg.jpg')"
+            }
         },
     },
     plugins: [],

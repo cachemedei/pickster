@@ -1,7 +1,6 @@
-import Movie from "@/app/components/Movie";
+import Movie from '@/app/components/Movie';
 
 async function getMoviesByGenre(id) {
-
     const url = new URL('https://api.themoviedb.org/3/discover/movie');
 
     url.search = new URLSearchParams({
@@ -17,13 +16,12 @@ async function getMoviesByGenre(id) {
     });
 
     const response = await fetch(url, {
-            method: 'GET',
-            headers: {
-                accept: 'application/json',
-                Authorization: `Bearer ${process.env.TMDB_API_KEY}`,
-            },
-        }
-    );
+        method: 'GET',
+        headers: {
+            accept: 'application/json',
+            Authorization: `Bearer ${process.env.TMDB_API_KEY}`,
+        },
+    });
     if (!response.ok) throw new Error('Failed to fetch movies');
 
     const data = await response.json();
@@ -32,7 +30,7 @@ async function getMoviesByGenre(id) {
 
 export default async function MovieResult({ params }) {
     const { id } = await params;
-    const movies = await getMoviesByGenre(id)
-    
+    const movies = await getMoviesByGenre(id);
+
     return <Movie genreId={id} movies={movies} />;
 }
